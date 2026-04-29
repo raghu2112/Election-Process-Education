@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    /* ── Target ── */
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    /* ── Path aliases (matches vite.config.ts) ── */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* ── Strictness (Code Quality criterion) ──
+       All strict flags enabled — catches type errors at compile time
+       rather than runtime, reducing bugs in production.
+    */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* ── Interop ── */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+
+    /* ── React ── */
+    "jsx": "react-jsx",
+
+    /* ── Output ── */
+    "noEmit": true,        // Vite handles transpilation; tsc is type-check only
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/__tests__/**"]
+}
